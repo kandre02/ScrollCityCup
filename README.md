@@ -1,6 +1,6 @@
 # Insurance Transfer DApp - Scroll City Cup Hackathon
 
-![logo](https://github.com/kandre02/ScrollCityCup/blob/main/public/logo.png)
+![logo](https://github.com/user-attachments/assets/7e23684c-31f9-4b25-8424-4ecde756f338)
 
 Author: Konstantinos Andreou
 
