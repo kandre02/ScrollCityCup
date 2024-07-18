@@ -1,8 +1,13 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%);
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
 }
 
 .App {
@@ -10,18 +15,21 @@ body {
   width: 100%;
   max-width: 800px;
   margin: auto;
+  padding: 20px; /* Add padding to the App container */
 }
 
 .App-header {
-  background-color: #ffd580; /* lighter orange */
-  padding: 20px;
+  background: rgba(255, 213, 128, 0.9); /* lighter orange with transparency */
+  padding: 40px 20px; /* Increase padding to move content down */
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .logo-container {
@@ -31,9 +39,16 @@ body {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin-right: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 nav {
@@ -43,12 +58,13 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: white;
+  color: #333;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ff6600;
 }
 
 h1 {
@@ -58,10 +74,16 @@ h1 {
 
 .card {
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -73,19 +95,21 @@ input {
 }
 
 .connect-button, .action-button {
-  background-color: #ff9900;
+  background-color: #ff6600;
   color: white;
   border: none;
   padding: 15px 30px;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   margin: 10px;
 }
 
 .connect-button:hover, .action-button:hover {
-  background-color: #cc7a00;
+  background-color: #e65c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .connect-button:focus, .action-button:focus {
@@ -95,6 +119,9 @@ input {
 .about {
   text-align: left;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about h2 {
@@ -116,4 +143,14 @@ input {
   margin: 10px 0;
   font-size: 1.1em;
   color: #444;
+}
+
+.about a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.about a:hover {
+  color: #e65c00;
 }

@@ -136,7 +136,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div className="logo-container">
-            <img src="./logo.png" alt="Logo" className="logo" />
+            <img src="/logo.png" alt="Logo" className="logo" />
             <h1>Insurance Transfer DApp</h1>
           </div>
           <nav>
