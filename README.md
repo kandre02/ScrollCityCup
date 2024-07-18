@@ -28,6 +28,7 @@ The Insurance Transfer DApp facilitates secure and authenticated transfers of Et
 
 ## Technologies and Tools Used
 
+- **The Graph**: Subgraph indexing for querying blockchain data.
 - **Remix IDE:** Used for developing and deploying the smart contract.
 - **OpenZeppelin:** Utilized for securing the smart contract with standard libraries.
 - **React:** A JavaScript library for building user interfaces.
@@ -50,6 +51,41 @@ The Insurance Transfer DApp facilitates secure and authenticated transfers of Et
 - Implements comprehensive modifiers to ensure that only the designated sender or receiver can claim or reclaim the transfers.
 - Ensures that each transfer must be claimed or reclaimed before a new transfer can be initiated by the same sender.
 
+## TheGraph 
+![image](https://github.com/user-attachments/assets/a21c628d-3730-4d55-8388-9b0bcdb26667)
+
+The Graph is a decentralized protocol for indexing and querying blockchain data. It allows developers to build and publish open APIs, called subgraphs, that applications can query using GraphQL. 
+
+In this project, The Graph is used to index and query events from the Insurance Transfer smart contract on the Scroll Sepolia Testnet. This enables efficient querying of transaction data, such as sent Ether, claimed Ether, and claimed back Ether events.
+
+### Subgraph Details
+
+- **Subgraph Name**: Insurance Transfer Subgraph
+- **Network**: Scroll Sepolia Testnet
+- **Entities**: 
+  - `EtherClaimed`
+  - `EtherClaimedBack`
+  - `EtherSent`
+
+### Querying the Subgraph
+
+You can query the subgraph using the Graph Explorer at [The Graph](https://thegraph.com/). Here is an example query:
+
+```graphql
+{
+  etherClaimeds(first: 5) {
+    id
+    sender
+    receiver
+    amount
+  }
+  etherClaimedBacks(first: 5) {
+    id
+    sender
+    amount
+    blockNumber
+  }
+}
 
 ## Contact
 
@@ -58,3 +94,7 @@ The Insurance Transfer DApp facilitates secure and authenticated transfers of Et
 - **Telegram**: [andreou00](https://t.me/andreou00)
 
 For any inquiries or support, please contact me through LinkedIn or Telegram.
+
+
+![image](https://github.com/user-attachments/assets/a21c628d-3730-4d55-8388-9b0bcdb26667)
+
