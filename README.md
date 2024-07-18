@@ -86,7 +86,7 @@ You can query the subgraph using the Graph Explorer at [The Graph](https://thegr
     blockNumber
   }
 }
-
+```
 ## Contact
 
 - **Author**: Konstantinos Andreou
